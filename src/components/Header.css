@@ -1,0 +1,35 @@
+.linkActive {
+	color: #ffffff !important;
+	background-color: #ffffff22;
+	border-radius: 0.2em;
+}
+
+.link {
+	color: #000000;
+	text-decoration: none;
+	margin-left: 1em;
+	font-family: 'arial';
+	padding: 0.5em;
+	transition: all 0.2s ease-in-out;
+}
+
+.link:hover {
+	background-color: #ffffff44;
+	color: #000000;
+	border-radius: 0.5em;
+}
+
+.logo {
+	margin: 1em;
+}
+
+.logoDiv:hover {
+	background-color: #ffffffff !important;
+}
+
+.links {
+	margin: 1em;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}

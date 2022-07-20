@@ -1,0 +1,63 @@
+* {
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+.content {
+	font-family: Arial, sans-serif;
+	font-size: 1.2em;
+	padding: 0 5em;
+}
+
+.quote {
+	padding: 3em 8em;
+	text-align: center;
+	background-color: #0a5a92;
+	color: #fff;
+	margin: 0em -6rem;
+	font-size: 1.2em;
+	max-width: 100vw;
+	overflow: hidden;
+}
+
+.quote p span {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 1em;
+}
+
+.splash {
+	height: 100vh;
+	z-index: -1;
+}
+
+.splashText {
+	position: absolute;
+	width: 100vw;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 2em;
+	font-family: 'arial';
+	color: #fff;
+	text-align: center;
+	text-shadow: 0 0 0.5em #00000066;
+}
+
+.whatWeDo {
+	margin: 3em;
+	text-align: left;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.wwdText {
+	font-size: 1.2em;
+	width: 80%;
+	padding: 10em 5em 10em 5em;
+}
+
+.wwdImage {
+	width: 50em;
+}
