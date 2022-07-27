@@ -42,7 +42,7 @@ const Header: React.FC = () => {
 						loading='eager'
 						placeholder='tracedSVG'
 						className='logo'
-						imgStyle={{ width: isScrolled ? '1em' : '2em' }}
+						width={150}
 					/>
 				</div>
 			</Link>
@@ -52,6 +52,12 @@ const Header: React.FC = () => {
 				</Link>
 				<Link to='/about' activeClassName='linkActive' className='link'>
 					ABOUT
+				</Link>
+				<Link
+					to='/foodservice'
+					activeClassName='linkActive'
+					className='link'>
+					FOODSERVICE
 				</Link>
 			</div>
 		</Nav>

@@ -41,39 +41,38 @@ const Index: React.FC = () => {
 					<Button href='#enquire'>Make an enquiry</Button>
 				</div>
 			</div>
-			<div className='content'>
-				<div className='quote'>
+
+			<div className='quote blue'>
+				<p>
+					<span>'</span>At Southern Milk Supplies, we endeavour to
+					provide the best service possible to our clients, as well as
+					giving them access to the largest range of branded products
+					in Australia.<span>'</span>
+				</p>
+			</div>
+
+			<div className='splitSection'>
+				<div className='splitText'>
+					<h2>What We Do</h2>
 					<p>
-						<span>'</span>At Southern Milk Supplies, we endeavour to
-						provide the best service possible to our clients, as
-						well as giving them access to the largest range of
-						branded products in Australia.<span>'</span>
+						Southern Milk Supplies has been in business for 24 years
+						and has prided itself on service and supply of Dairy and
+						Foodservice goods throughout this period. <br />
+						We guarantee our products and treat every one of our
+						customers as ‘gold’ <br /> Our Sales and Marketing team,
+						headed up by Craig Stevens, will endeavour to satisfy
+						all of your requirements.
 					</p>
 				</div>
-
-				<div className='whatWeDo'>
-					<div className='wwdText'>
-						<h2>What We Do</h2>
-						<p>
-							Southern Milk Supplies has been in business for 24
-							years and has prided itself on service and supply of
-							Dairy and Foodservice goods throughout this period.{' '}
-							<br />
-							We guarantee our products and treat every one of our
-							customers as ‘gold’ <br /> Our Sales and Marketing
-							team, headed up by Craig Stevens, will endeavour to
-							satisfy all of your requirements.
-						</p>
-					</div>
-					<div className='wwdImage'>
-						<StaticImage
-							src='../images/milkjugs.jpg'
-							alt='jugs of milk'
-							placeholder='blurred'
-						/>
-					</div>
+				<div className='splitImage'>
+					<StaticImage
+						src='../images/milkjugs.jpg'
+						alt='jugs of milk'
+						placeholder='blurred'
+					/>
 				</div>
 			</div>
+
 			<Footer />
 		</div>
 	);
