@@ -39,11 +39,30 @@
 	text-shadow: 0 0 0.5em #00000066;
 }
 
+.Button {
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	padding: 1em;
+	background-color: #0a5a92;
+	border-radius: 2em;
+	text-decoration: none;
+	color: #fff;
+	transition: all 0.1s ease-in-out;
+	text-shadow: none !important;
+}
+
+.Button:hover {
+	background-color: #0066ff;
+}
+
 .splitSection {
-	margin: 3em;
+	max-width: 100vw;
+	padding: 5em;
 	text-align: left;
 	display: flex;
 	justify-content: space-between;
+	align-content: space-between;
+
 	align-items: center;
 }
 
@@ -54,12 +73,11 @@
 
 .splitText {
 	font-size: 1.2em;
-	width: 80%;
-	padding: 10em 5em 10em 5em;
+	width: 60%;
 }
 
-.splitImage {
-	width: 50em;
+.splitImage img {
+	height: 50em;
 }
 
 .columnGroup {
@@ -84,4 +102,8 @@
 .bio {
 	padding: 4rem;
 	font-size: 1.2rem;
+}
+
+.small img {
+	height: 20em;
 }

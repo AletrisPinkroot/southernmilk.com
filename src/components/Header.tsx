@@ -54,10 +54,22 @@ const Header: React.FC = () => {
 					ABOUT
 				</Link>
 				<Link
-					to='/foodservice'
+					to='/services'
 					activeClassName='linkActive'
 					className='link'>
-					FOODSERVICE
+					SERVICES
+				</Link>
+				<Link
+					to='/storyofmilk'
+					activeClassName='linkActive'
+					className='link'>
+					MILK STORY
+				</Link>
+				<Link
+					to='/contactus'
+					activeClassName='linkActive'
+					className='link'>
+					CONTACT US
 				</Link>
 			</div>
 		</Nav>

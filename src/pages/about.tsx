@@ -57,29 +57,6 @@ const About: React.FC = () => {
 				</div>
 				<div className='splitImage'></div>
 			</div>
-			{/* info about staff */}
-			<div className='columnGroup blue'>
-				<div className='column'>
-					<h2>Paul Goss</h2>
-					<h3>Owner</h3>
-					<p>Paul comes from a military background</p>
-				</div>
-				<div className='column'>
-					<h2>Craig Stevens</h2>
-					<h3>Owner</h3>
-					<p>Craig comes from a sales background</p>
-				</div>
-				<div className='column'>
-					<h2>Ross Thornton</h2>
-					<h3>Operations Manager</h3>
-					<p>Ross blah blah</p>
-				</div>
-				<div className='column'>
-					<h2>Goran Trbojevic</h2>
-					<h3>Warehouse Manager</h3>
-					<p>Goran blah blah</p>
-				</div>
-			</div>
 
 			<Footer />
 		</div>
