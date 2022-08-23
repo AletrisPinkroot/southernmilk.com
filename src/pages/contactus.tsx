@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { EnquireBox } from '../components/Enquire';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const ContactUs: React.FC = () => {
@@ -21,9 +22,7 @@ const ContactUs: React.FC = () => {
 				Reach us at 1300 00 MILK or{' '}
 				<a href='mailto:info@southernmilk.com'>info@southernmilk.com</a>
 				<br />
-				<a href='#enquiry' className='Button'>
-					ENQUIRE
-				</a>
+				<EnquireBox />
 			</div>
 			<Footer />
 		</div>

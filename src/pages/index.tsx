@@ -1,25 +1,10 @@
 import * as React from 'react';
 import Header from '../components/Header';
 import { StaticImage } from 'gatsby-plugin-image';
+import { EnquireBox } from '../components/Enquire';
 import '../components/main.css';
 import styled from 'styled-components';
 import Footer from '../components/Footer';
-
-const Button = styled.a`
-	text-transform: uppercase;
-	font-size: 1.2rem;
-	padding: 1em;
-	background-color: #0a5a92;
-	border-radius: 2em;
-	text-decoration: none;
-	color: #fff;
-	transition: all 0.1s ease-in-out;
-	text-shadow: none !important;
-
-	&:hover {
-		background-color: #0066ff;
-	}
-`;
 
 const Index: React.FC = () => {
 	return (
@@ -38,7 +23,7 @@ const Index: React.FC = () => {
 					<h1>SOUTHERN MILK SUPPLIES</h1>
 					<p>Your business is our business!</p>
 					<br />
-					<Button href='#enquire'>Make an enquiry</Button>
+					<EnquireBox />
 				</div>
 			</div>
 
