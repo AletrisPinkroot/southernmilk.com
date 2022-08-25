@@ -10,17 +10,13 @@ const EnquireBox: React.FC = () => {
 			modal
 			nested>
 			<div className='enquirePopup'>
-				<h1>ENQUIRY!!!</h1>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Voluptates, porro? Deleniti itaque perspiciatis illum quo
-					eveniet dolorum dolor, odit voluptatibus repudiandae,
-					cupiditate similique. Temporibus, aspernatur repellat
-					blanditiis magnam consequatur optio voluptates molestiae
-					odit eos ratione sunt consequuntur! Itaque qui esse nulla
-					facere sit, repellendus tempora perspiciatis ullam alias,
-					sapiente quam.
-				</p>
+				<h1>Make an Enquiry</h1>
+				<form action="submit">
+					<input type="email" name="Your Email" id="email" />
+					<input type="text" name="Business Name" id="name" />
+					<input type="tel" name="Phone Number" id="phone number" />
+					<input type="text" name="Content" id="content" />
+				</form>
 			</div>
 		</Popup>
 	);
