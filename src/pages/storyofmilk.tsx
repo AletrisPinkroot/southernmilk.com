@@ -4,6 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import Footer from '../components/Footer';
 
 const StoryOfMilk: React.FC = () => {
+	// geet better pictures obv
 	return (
 		<div>
 			<Header />
