@@ -15,7 +15,7 @@
 }
 
 .splash {
-	height: 80vh;
+	height: 95vh;
 	z-index: -1;
 }
 .half {
@@ -24,6 +24,16 @@
 
 .quarter {
 	top: 25% !important;
+}
+
+.enquiryForm {
+	display: flex;
+	flex-direction: column;
+}
+
+.enquiryInput {
+	display: flex;
+	flex-direction: column;
 }
 
 .splashText {
