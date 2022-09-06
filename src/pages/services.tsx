@@ -14,7 +14,7 @@ const Services: React.FC = () => {
 					className='splash half'
 				/>
 				<div className='splashText quarter'>
-					<h1>Foodservice</h1>
+					<h1>Services</h1>
 				</div>
 			</div>
 			<div className='quote blue'>

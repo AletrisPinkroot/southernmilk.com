@@ -23,7 +23,15 @@
 	margin: 1em;
 }
 
+.biglogoDiv {
+	transform: translate(calc(50vw - 50%), 10vh) scale(200%);
+}
+
 .logoDiv:hover {
+	background-color: #ffffffff !important;
+}
+
+.bigLogoDiv:hover {
 	background-color: #ffffffff !important;
 }
 

@@ -17,10 +17,19 @@ const Nav = styled.nav`
 
 const Header: React.FC = () => {
 	const [isScrolled, setIsScrolled] = React.useState(false);
+	const [home, setHome] = React.useState(false);
 
 	window.addEventListener('scroll', () => {
 		setIsScrolled(window.scrollY > 0);
 	});
+
+	const isActive = ({ isCurrent }: { isCurrent: boolean }) => {
+		if (isCurrent) {
+			setHome(true);
+			return { className: 'linkActive link' };
+		} else setHome(false);
+		console.log(home);
+	};
 
 	return (
 		<Nav
@@ -30,11 +39,17 @@ const Header: React.FC = () => {
 			}}>
 			<Link to='/'>
 				<div
-					className='logoDiv'
+					className={
+						home
+							? isScrolled
+								? 'logoDiv'
+								: 'biglogoDiv'
+							: 'logoDiv'
+					}
 					style={{
 						backgroundColor: isScrolled ? '#ffffff66' : '#ffffffdd',
 
-						transition: 'all 0.5s',
+						transition: 'all 2s',
 					}}>
 					<StaticImage
 						src='../images/SMS Logo.png'
@@ -47,7 +62,11 @@ const Header: React.FC = () => {
 				</div>
 			</Link>
 			<div className='links'>
-				<Link to='/' activeClassName='linkActive' className='link'>
+				<Link
+					to='/'
+					activeClassName='linkActive'
+					className='link'
+					getProps={isActive}>
 					HOME
 				</Link>
 				<Link to='/about' activeClassName='linkActive' className='link'>
