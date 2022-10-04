@@ -3,12 +3,16 @@ import Header from '../components/Header';
 import { StaticImage } from 'gatsby-plugin-image';
 import { EnquireBox } from '../components/Enquire';
 import '../components/main.css';
-import styled from 'styled-components';
 import Footer from '../components/Footer';
+import '../components/Header.css';
+import '../components/Footer.css';
+import '../components/Enquire.css';
+import { useMediaQuery } from 'react-responsive';
 
 const Index: React.FC = () => {
+	const isMobile = useMediaQuery({ query: '(max-width: 1000px)' });
 	return (
-		<div style={{}}>
+		<div>
 			<Header />
 			<div className='splashSection'>
 				<StaticImage
@@ -63,4 +67,12 @@ const Index: React.FC = () => {
 	);
 };
 
+export const Head = () => {
+	return (
+		<>
+			<meta name='description' content='Southern Milk Supplies' />
+			<title>Home | Southern Milk Supplies</title>
+		</>
+	);
+};
 export default Index;

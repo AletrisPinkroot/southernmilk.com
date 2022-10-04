@@ -18,6 +18,7 @@
 
 .enquirePopup {
 	margin: 5rem;
+	border-radius: 1em;
 	background-color: white;
 	padding: 2rem;
 	box-shadow: #000 0px 0px 20px;
@@ -25,6 +26,22 @@
 
 .popup-overlay {
 	background-color: #000000aa;
+}
+
+.enquiryInput {
+	margin: 0.2em 0;
+}
+
+#submit {
+	background-color: #0a5a92;
+	border-radius: 2em;
+	color: white;
+	padding: 1em;
+	border: none;
+}
+
+#submit:hover {
+	background-color: #0066ff;
 }
 
 @keyframes body {

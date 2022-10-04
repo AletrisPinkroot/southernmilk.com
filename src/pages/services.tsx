@@ -47,4 +47,13 @@ const Services: React.FC = () => {
 	);
 };
 
+export const Head = () => {
+	return (
+		<>
+			<title>Services | Southern Milk Story</title>
+			<meta name='description' content='Services from southern milk ' />
+		</>
+	);
+};
+
 export default Services;

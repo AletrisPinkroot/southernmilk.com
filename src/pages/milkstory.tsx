@@ -15,7 +15,7 @@ const StoryOfMilk: React.FC = () => {
 					className='splash half'
 				/>
 				<div className='splashText quarter'>
-					<h1>The story of Milk Production</h1>
+					<h1>Milk Story</h1>
 				</div>
 			</div>
 
@@ -82,4 +82,15 @@ const StoryOfMilk: React.FC = () => {
 	);
 };
 
+export const Head = () => {
+	return (
+		<>
+			<title>Milk Story | Southern Milk Supplies</title>
+			<meta
+				name='description'
+				content='The story of milk: southern milk supplies'
+			/>
+		</>
+	);
+};
 export default StoryOfMilk;

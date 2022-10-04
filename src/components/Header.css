@@ -1,7 +1,22 @@
 .linkActive {
 	color: #ffffff !important;
-	background-color: #ffffff22;
+	background-color: #0a5a92;
 	border-radius: 0.2em;
+	font-weight: bold;
+}
+.linkActive:hover {
+	background-color: #5292bf !important;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+
+	position: fixed;
+	width: 100vw;
+	height: 5.5em;
+	transition: all 1s;
+	z-index: 50;
 }
 
 .link {
@@ -23,16 +38,26 @@
 	margin: 1em;
 }
 
-.biglogoDiv {
-	transform: translate(calc(50vw - 50%), 10vh) scale(200%);
+.biglogo {
+	transform: translate(calc(50vw - 50%), 15vh) scale(400%);
+	background-color: #ffffff00 !important;
+	pointer-events: none;
+}
+
+.logoDiv {
+	height: 5.5em;
+
+	width: 12em;
+
+	transition: all 0.8s ease-in-out;
 }
 
 .logoDiv:hover {
 	background-color: #ffffffff !important;
 }
 
-.bigLogoDiv:hover {
-	background-color: #ffffffff !important;
+.biglogo:hover {
+	background-color: #ffffff00 !important;
 }
 
 .links {
@@ -40,4 +65,60 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+}
+
+.homeOverlay {
+	position: absolute;
+	width: 100vw;
+	height: 50vh;
+	background-image: linear-gradient(#ffffffff, #ffffff0f);
+	background-size: 100% 100%;
+	z-index: -100;
+	transition: all 1s ease-in-out;
+	pointer-events: none;
+}
+
+.hide {
+	transform: translateY(-100%);
+}
+
+.mobileLinks {
+	flex-direction: column;
+	position: fixed;
+	right: 0%;
+	display: flex;
+	justify-content: right;
+	z-index: 2;
+	margin: 1em;
+	animation: hamburger 0.5s ease-in-out both;
+}
+
+.hamburger {
+	background-color: white;
+	color: black;
+	padding: 2em;
+	border: none;
+}
+
+.barOverlay {
+	background-color: #000000aa;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1;
+}
+
+@media (max-width: 1000px) {
+	.link {
+		color: white;
+	}
+}
+
+@keyframes hamburger {
+	0% {
+		transform: translateX(8em);
+	}
+	100% {
+		transform: translateX(0);
+	}
 }

@@ -24,18 +24,9 @@ const About: React.FC = () => {
 			<div className='bio blue'>
 				{/* information about the business and our history */}
 				<p>
-					My name is Paul Goss and I started Modern Milk Supplies (now
-					Southern Milk Supplies) in 1990 with my wife Michelle.
-					Service to my customers has always been at the forefront of
-					what we do. My current business partner, Craig Stevens has
-					always had that philosophy as well, coming from 15 years
-					sales and marketing at Parmalat (Paul’s). <br />
-					Both Craig and I are both proud of the fact that our
-					children are now employees of the company, with my son,
-					Anthony, working in the coolroom and Craig's son, Brenton,
-					driving trucks. We endeavour to provide the best service
-					possible to our clients, as well as giving them access to
-					the largest range of branded products in Australia.
+					We are a Lactalis distributor who's been in operation for
+					over 20 years, providing excellent service to each and every
+					customer.
 					<br /> Our Business is HACCP Certified, and our staff are
 					trained in HACCP procedures, giving our customers guarantees
 					above and beyond our competitors. We will keep ahead of the
@@ -55,11 +46,25 @@ const About: React.FC = () => {
 						Gisborne, and the Macedon Ranges.
 					</p>
 				</div>
-				<div className='splitImage'></div>
+				<div className='splitImage'>
+					<StaticImage
+						src='../images/melbs.jpg'
+						alt='Looking at Melbourne over Albert Park'
+					/>
+				</div>
 			</div>
 
 			<Footer />
 		</div>
+	);
+};
+
+export const Head = () => {
+	return (
+		<>
+			<title>About | Southern Milk Supplies</title>
+			<meta name='description' content='Southern Milk Supplies About' />
+		</>
 	);
 };
 
