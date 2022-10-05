@@ -27,7 +27,12 @@ const SuburbPage: React.FC = (props: any) => {
 				Ballarat, and deliver from Ballarat out to Gisborne and
 				Beaufort.
 			</div>
-			<div className='info'>{props.pageContext.information}</div>
+			<div className='info'>{props.pageContext.info}</div>
+			<div className='video'>
+				<video
+					src='../images/southernmilk.mov'
+					title={props.pageContext.title}></video>
+			</div>
 
 			<Footer />
 		</div>

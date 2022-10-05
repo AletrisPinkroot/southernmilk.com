@@ -1,5 +1,4 @@
 import * as React from 'react';
-import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import '../components/Header.css';
@@ -99,6 +98,12 @@ const Header: React.FC = () => {
 						SERVICES
 					</Link>
 					<Link
+						to='/suburbs'
+						activeClassName='linkActive'
+						className='link'>
+						SUBURBS
+					</Link>
+					<Link
 						to='/milkstory'
 						activeClassName='linkActive'
 						className='link'>
@@ -134,6 +139,12 @@ const Header: React.FC = () => {
 							activeClassName='linkActive'
 							className='link'>
 							SERVICES
+						</Link>
+						<Link
+							to='/suburbs'
+							activeClassName='linkActive'
+							className='link'>
+							SUBURBS
 						</Link>
 						<Link
 							to='/milkstory'
