@@ -14,6 +14,8 @@ const Index: React.FC = () => {
 	return (
 		<div>
 			<Header />
+
+			{/* Splash section */}
 			<div className='splashSection'>
 				<StaticImage
 					src='../images/tempsplash.jpg'
@@ -22,6 +24,7 @@ const Index: React.FC = () => {
 					className='splash'
 					layout='fullWidth'
 				/>
+
 				<div className='splashText'>
 					<p>At</p>
 					<h1>SOUTHERN MILK SUPPLIES</h1>
@@ -31,6 +34,7 @@ const Index: React.FC = () => {
 				</div>
 			</div>
 
+			{/* Quote area */}
 			<div className='quote blue'>
 				<p>
 					<span>'</span>At Southern Milk Supplies, we endeavour to
@@ -40,6 +44,7 @@ const Index: React.FC = () => {
 				</p>
 			</div>
 
+			{/* Split section  */}
 			<div className='splitSection'>
 				<div className='splitText'>
 					<h2>What We Do</h2>
@@ -70,7 +75,12 @@ const Index: React.FC = () => {
 export const Head = () => {
 	return (
 		<>
-			<meta name='description' content='Southern Milk Supplies' />
+			<meta
+				name='description'
+				content='Southern Milk Supplies is a milk distributor based in Victoria,
+				delivering all throughout the eastern and south-eastern suburbs of Melbourne,
+				the Mornington Peninsula, as well as the greater Ballarat region.'
+			/>
 			<title>Home | Southern Milk Supplies</title>
 		</>
 	);

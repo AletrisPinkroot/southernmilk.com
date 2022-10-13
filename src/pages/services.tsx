@@ -27,6 +27,14 @@ const Services: React.FC = () => {
 				service, with a full range of over 2000 products for the food
 				service industry.
 			</div>
+			<div className='quote'>
+				<a href='/FoodserviceProducts.xlsx' download>
+					download list{' '}
+				</a>
+			</div>
+			{/*
+			JADED: To be bored of something from overexertion
+			*/}
 			<div className='bio'>
 				Just as always, Southern Milk Supplies continues to be a
 				premiere distributor of milk and milk products. Some of the

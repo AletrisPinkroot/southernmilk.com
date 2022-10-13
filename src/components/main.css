@@ -7,10 +7,23 @@
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+	background-color: var(--basicblue);
+}
+
 .quote {
 	padding: 3em 8em;
 	text-align: center;
 	font-size: 1.2em;
+	background-color: white;
+}
+
+.splitSection {
+	background-color: white;
+}
+
+.bio {
+	background-color: white;
 }
 
 .splash {
@@ -99,6 +112,33 @@
 .bio {
 	padding: 4em;
 	font-size: 1.2em;
+}
+
+.suburbData {
+	display: flex;
+	padding: 2em;
+	align-items: center;
+	background-color: white;
+}
+
+.suburbLink {
+	margin: 10px 2em;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: black;
+}
+
+.info {
+	flex: 1;
+	margin: 2em;
+}
+
+.video {
+	flex: 1;
+}
+
+.video video {
+	width: 50vw;
 }
 
 /*hiiii*/

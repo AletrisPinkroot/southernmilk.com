@@ -4,7 +4,7 @@ import '../components/Enquire.css';
 import Popup from 'reactjs-popup';
 import sendEmail from './emailSend';
 
-const EnquireBox: React.FC = () => {
+const EnquireBox: React.FC<{ suburb?: string }> = (props: any) => {
 	const handleSubmit = (event: React.FormEvent) => {
 		console.log(formData.email);
 		event.preventDefault();
@@ -12,7 +12,8 @@ const EnquireBox: React.FC = () => {
 			formData.email,
 			formData.name,
 			formData.phone,
-			formData.content
+			formData.content,
+			formData.location
 		);
 		handleSubmitChanges();
 	};
@@ -20,6 +21,7 @@ const EnquireBox: React.FC = () => {
 		email: '',
 		name: '',
 		phone: '',
+		location: props.suburb,
 		content: '',
 	});
 
@@ -80,6 +82,15 @@ const EnquireBox: React.FC = () => {
 									id='phone'
 									onChange={handleInput}
 								/>
+							</div>
+							<div className='enquiryInput'>
+								<label htmlFor='location'>Location</label>
+								<input
+									type='text'
+									name='location'
+									id='location'
+									value={props.suburb}
+									onChange={handleInput}></input>
 							</div>
 							<div className='enquiryInput'>
 								<label htmlFor='content'>Description</label>

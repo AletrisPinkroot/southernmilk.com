@@ -52,7 +52,7 @@ const Header: React.FC = () => {
 						backgroundColor: isScrolled ? '#ffffff66' : '#ffffffdd',
 					}}>
 					<StaticImage
-						src='../images/SMS Logo.png'
+						src='../images/smslogo.png'
 						alt='Southern Milk Supplies'
 						loading='eager'
 						placeholder='tracedSVG'
@@ -102,6 +102,12 @@ const Header: React.FC = () => {
 						activeClassName='linkActive'
 						className='link'>
 						SUBURBS
+					</Link>
+					<Link
+						to='/orders'
+						activeClassName='linkActive'
+						className='link'>
+						ORDERS
 					</Link>
 					<Link
 						to='/milkstory'

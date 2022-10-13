@@ -17,7 +17,7 @@ const Suburbs: React.FC = (props: any) => {
 			<Header />
 			<div className='splashSection'>
 				<StaticImage
-					src='../images/tempsplash.jpg'
+					src='../../images/tempsplash.jpg'
 					alt='field'
 					className='splash half'
 				/>
@@ -34,7 +34,9 @@ const Suburbs: React.FC = (props: any) => {
 			<div className='quote'>
 				<div className='grid'>
 					{data.map((row: any) => (
-						<Link to={`/suburbs/${slugify(row.node.name)}`}>
+						<Link
+							class='suburbLink'
+							to={`/suburbs/${slugify(row.node.name)}`}>
 							{row.node.name}
 						</Link>
 					))}
@@ -42,6 +44,15 @@ const Suburbs: React.FC = (props: any) => {
 			</div>
 			<Footer />
 		</div>
+	);
+};
+
+export const Head = () => {
+	return (
+		<>
+			<title>Suburbs | Southern Milk Story</title>
+			<meta name='description' content='Suburbs from southern milk ' />
+		</>
 	);
 };
 

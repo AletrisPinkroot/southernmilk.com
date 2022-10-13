@@ -4,7 +4,8 @@ const sendEmail = (
 	email: string,
 	businessName: string,
 	phoneNumber: string,
-	content: string
+	content: string,
+	location: string
 ) => {
 	mailjs.init('gCDHQY1YCE3TRanAM');
 
@@ -13,6 +14,7 @@ const sendEmail = (
 		customer_email: email,
 		message: content,
 		phone_number: phoneNumber,
+		location: location,
 	});
 
 	console.log('sent?');
