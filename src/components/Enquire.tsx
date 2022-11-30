@@ -5,8 +5,14 @@ import Popup from 'reactjs-popup';
 import sendEmail from './emailSend';
 
 const EnquireBox: React.FC<{ suburb?: string }> = (props: any) => {
-	const handleSubmit = (event: React.FormEvent) => {
-		console.log(formData.email);
+	const [formData, setFormData] = React.useState({
+		email: '',
+		name: '',
+		phone: '',
+		location: props.suburb,
+		content: '',
+	});
+	const submitForm = (event: React.FormEvent) => {
 		event.preventDefault();
 		sendEmail(
 			formData.email,
@@ -17,13 +23,6 @@ const EnquireBox: React.FC<{ suburb?: string }> = (props: any) => {
 		);
 		handleSubmitChanges();
 	};
-	const [formData, setFormData] = React.useState({
-		email: '',
-		name: '',
-		phone: '',
-		location: props.suburb,
-		content: '',
-	});
 
 	const [submitted, setSubmitted] = React.useState(false);
 	const handleSubmitChanges = () => {
@@ -48,17 +47,34 @@ const EnquireBox: React.FC<{ suburb?: string }> = (props: any) => {
 
 	return (
 		<>
-			<button className='enquireButton' onClick={() => setOpen(!open)}>
+			<button
+				className='enquireButton'
+				onClick={() => {
+					setSubmitted(false);
+					setOpen(!open);
+				}}>
 				ENQUIRE
 			</button>
 			<Popup modal open={open} nested onClose={closeBox}>
 				<div className='enquirePopup'>
+					<a
+						onClick={closeBox}
+						style={{
+							cursor: 'pointer',
+							backgroundColor: 'blue',
+							color: 'white',
+							padding: '5px',
+							borderRadius: '50%',
+						}}>
+						X
+					</a>
 					<h1>Make an Enquiry</h1>
 					{!submitted ? (
-						<form className='enquiryForm' onSubmit={handleSubmit}>
+						<form className='enquiryForm' onSubmit={submitForm}>
 							<div className='enquiryInput'>
 								<label htmlFor='email'>Email</label>
 								<input
+									required
 									type='email'
 									name='email'
 									id='email'
@@ -68,6 +84,7 @@ const EnquireBox: React.FC<{ suburb?: string }> = (props: any) => {
 							<div className='enquiryInput'>
 								<label htmlFor='name'>Business Name</label>
 								<input
+									required
 									type='text'
 									name='name'
 									id='name'
@@ -77,6 +94,7 @@ const EnquireBox: React.FC<{ suburb?: string }> = (props: any) => {
 							<div className='enquiryInput'>
 								<label htmlFor='phone'>Phone Number</label>
 								<input
+									required
 									type='tel'
 									name='phone'
 									id='phone'
@@ -84,7 +102,7 @@ const EnquireBox: React.FC<{ suburb?: string }> = (props: any) => {
 								/>
 							</div>
 							<div className='enquiryInput'>
-								<label htmlFor='location'>Location</label>
+								<label htmlFor='location'>Suburb</label>
 								<input
 									type='text'
 									name='location'
@@ -95,6 +113,7 @@ const EnquireBox: React.FC<{ suburb?: string }> = (props: any) => {
 							<div className='enquiryInput'>
 								<label htmlFor='content'>Description</label>
 								<textarea
+									required
 									name='content'
 									id='content'
 									cols={30}
@@ -108,7 +127,7 @@ const EnquireBox: React.FC<{ suburb?: string }> = (props: any) => {
 							</div>
 						</form>
 					) : (
-						<h1>Submitted!</h1>
+						<p className='submitText'>Submitted!</p>
 					)}
 				</div>
 			</Popup>

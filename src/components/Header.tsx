@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import '../components/Header.css';
 import { useMediaQuery } from 'react-responsive';
+import menuButton from '../images/menu.svg';
 
 const isBrowser = typeof window !== 'undefined';
 
@@ -28,7 +29,6 @@ const Header: React.FC = () => {
 			setHome(true);
 			return { className: 'linkActive link' };
 		} else setHome(false);
-		console.log(home);
 	};
 
 	return (
@@ -74,7 +74,7 @@ const Header: React.FC = () => {
 				style={{}}></div>
 			{isMobile ? (
 				<button onClick={toggleSide} className='hamburger'>
-					=
+					<img src={menuButton} alt='Menu' />
 				</button>
 			) : (
 				<div className={'links'}>

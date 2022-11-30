@@ -137,6 +137,10 @@ body {
 	flex: 1;
 }
 
+.submitText {
+	text-align: center;
+}
+
 .video video {
 	width: 50vw;
 }

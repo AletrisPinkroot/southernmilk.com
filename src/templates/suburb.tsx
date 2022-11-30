@@ -16,7 +16,7 @@ const SuburbPage: React.FC = (props: any) => {
 			<Header />
 			<div className='splashSection'>
 				<StaticImage
-					src='../../images/tempsplash.jpg'
+					src='../images/tempsplash.jpg'
 					alt='field'
 					className='splash half'
 				/>
@@ -36,6 +36,10 @@ const SuburbPage: React.FC = (props: any) => {
 					<h2>{props.pageContext.title}</h2>
 					<p>{props.pageContext.info}</p>
 					<p>
+						Information from <a href='//wikipedia.org'>Wikipedia</a>
+					</p>
+					<br />
+					<p>
 						We deliver Pauls milk products and all Lactalis milk, as
 						well as our own selection of foodservice products so you
 						don't need to deal with any other suppliers!{' '}
@@ -43,7 +47,12 @@ const SuburbPage: React.FC = (props: any) => {
 				</div>
 				<div className='video'>
 					<video autoPlay controls title={props.pageContext.title}>
-						<source src={video} />
+						<source
+							src={`${props.pageContext.title.replace(
+								' ',
+								''
+							)}.mp4`}
+						/>
 					</video>
 				</div>
 			</div>

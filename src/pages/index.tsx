@@ -1,16 +1,18 @@
+//External imports
 import * as React from 'react';
-import Header from '../components/Header';
 import { StaticImage } from 'gatsby-plugin-image';
-import { EnquireBox } from '../components/Enquire';
-import '../components/main.css';
+//Component imports
+import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { EnquireBox } from '../components/Enquire';
+//css imports
+import '../components/main.css';
 import '../components/Header.css';
 import '../components/Footer.css';
 import '../components/Enquire.css';
-import { useMediaQuery } from 'react-responsive';
 
+//Index page
 const Index: React.FC = () => {
-	const isMobile = useMediaQuery({ query: '(max-width: 1000px)' });
 	return (
 		<div>
 			<Header />
@@ -67,11 +69,13 @@ const Index: React.FC = () => {
 				</div>
 			</div>
 
+			{/* Footer section */}
 			<Footer />
 		</div>
 	);
 };
 
+//Head function to do SEO stuff
 export const Head = () => {
 	return (
 		<>

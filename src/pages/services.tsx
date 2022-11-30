@@ -3,6 +3,7 @@ import React from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
+//Services page: Information about what stock we sell
 const Services: React.FC = () => {
 	return (
 		<div>
@@ -32,9 +33,7 @@ const Services: React.FC = () => {
 					download list{' '}
 				</a>
 			</div>
-			{/*
-			JADED: To be bored of something from overexertion
-			*/}
+
 			<div className='bio'>
 				Just as always, Southern Milk Supplies continues to be a
 				premiere distributor of milk and milk products. Some of the
